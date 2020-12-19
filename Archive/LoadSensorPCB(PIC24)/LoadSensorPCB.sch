@@ -1,0 +1,117 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 2020-11-28_18-41-16:PIC24F16KA102-E_ML U?
+U 1 1 5FC38687
+P 100 3650
+F 0 "U?" H 5250 6287 60  0000 C CNN
+F 1 "PIC24F16KA102-E_ML" H 5250 6181 60  0000 C CNN
+F 2 "QFN28_6x6MC_MCH" H 5250 6140 60  0001 C CNN
+F 3 "" H 950 5900 60  0000 C CNN
+	1    100  3650
+	1    0    0    -1  
+$EndComp
+Text GLabel 1750 4200 0    50   Input ~ 0
+VDD
+Text GLabel 2050 4200 0    50   Input ~ 0
+VSS
+Text GLabel 1350 4200 0    50   Input ~ 0
+MCLR-VPP
+Text GLabel 2450 4200 0    50   Input ~ 0
+PGD1
+Text GLabel 2850 4200 0    50   Input ~ 0
+PGC1
+$Comp
+L Device:C C?
+U 1 1 5FC4DAB0
+P 4300 4050
+F 0 "C?" H 4415 4096 50  0000 L CNN
+F 1 "C" H 4415 4005 50  0000 L CNN
+F 2 "" H 4338 3900 50  0001 C CNN
+F 3 "~" H 4300 4050 50  0001 C CNN
+	1    4300 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FC4E57D
+P 4900 4100
+F 0 "C?" H 5015 4146 50  0000 L CNN
+F 1 "C" H 5015 4055 50  0000 L CNN
+F 2 "" H 4938 3950 50  0001 C CNN
+F 3 "~" H 4900 4100 50  0001 C CNN
+	1    4900 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FC4EE21
+P 5750 4050
+F 0 "C?" H 5865 4096 50  0000 L CNN
+F 1 "C" H 5865 4005 50  0000 L CNN
+F 2 "" H 5788 3900 50  0001 C CNN
+F 3 "~" H 5750 4050 50  0001 C CNN
+	1    5750 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FC4F444
+P 6450 3850
+F 0 "R?" H 6520 3896 50  0000 L CNN
+F 1 "R" H 6520 3805 50  0000 L CNN
+F 2 "" V 6380 3850 50  0001 C CNN
+F 3 "~" H 6450 3850 50  0001 C CNN
+	1    6450 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FC4F88C
+P 6700 3850
+F 0 "R?" H 6770 3896 50  0000 L CNN
+F 1 "R" H 6770 3805 50  0000 L CNN
+F 2 "" V 6630 3850 50  0001 C CNN
+F 3 "~" H 6700 3850 50  0001 C CNN
+	1    6700 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R100K
+U 1 1 5FC5027E
+P 10700 1800
+F 0 "R100K" H 10770 1846 50  0000 L CNN
+F 1 "R" H 10770 1755 50  0000 L CNN
+F 2 "" V 10630 1800 50  0001 C CNN
+F 3 "~" H 10700 1800 50  0001 C CNN
+	1    10700 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9550 1700 10300 1700
+Wire Wire Line
+	10300 1700 10300 1600
+Wire Wire Line
+	10300 1600 10700 1600
+Wire Wire Line
+	10700 1600 10700 1650
+Wire Wire Line
+	10700 1950 10550 1950
+Wire Wire Line
+	10550 1950 10550 1900
+Wire Wire Line
+	10550 1900 9550 1900
+$EndSCHEMATC

@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name PIC24)(type KiCad)(uri ${KIPRJMOD}/ul_PIC24F16KA102EML/PIC24.pretty)(options "")(descr ""))
+  (lib (name PIC24F16KA102-QPF-Foot)(type KiCad)(uri ${KIPRJMOD}/ul_PIC24F16KA102EML/PIC24.pretty/PIC24F16KA102-QPF-Foot.pretty)(options "")(descr ""))
+)
