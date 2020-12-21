@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name Regulator_Linear)(type Legacy)(uri ${KICAD_SYMBOL_DIR}/Regulator_Linear.lib)(options "")(descr ""))
+  (lib (name 2020-12-17_22-11-25)(type Legacy)(uri S:/Axle_Load_Sensor/ul_SPIRIT1QTR/KiCAD/2020-12-17_22-11-25/2020-12-17_22-11-25.lib)(options "")(descr ""))
+)
