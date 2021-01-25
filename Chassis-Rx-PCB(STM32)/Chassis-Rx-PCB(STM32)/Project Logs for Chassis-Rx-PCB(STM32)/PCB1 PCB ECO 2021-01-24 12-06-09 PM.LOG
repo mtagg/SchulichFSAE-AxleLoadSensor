@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=GND Pin=P2-2
+Removed Pin From Net: NetName=NetP2_5 Pin=U1-37
+Added Pin To Net: NetName=GND Pin=P2-3
+Added Pin To Net: NetName=NetP2_5 Pin=R1-2
+Added Pin To Net: NetName=NetP2_5 Pin=U1-7
+Added Pin To Net: NetName=NetP2_2 Pin=P2-2
+Added Pin To Net: NetName=NetP2_2 Pin=U1-37
+Added Net: Name=NetP2_2
+Added Room: Name=Chassis-Rx-PCB(STM32)

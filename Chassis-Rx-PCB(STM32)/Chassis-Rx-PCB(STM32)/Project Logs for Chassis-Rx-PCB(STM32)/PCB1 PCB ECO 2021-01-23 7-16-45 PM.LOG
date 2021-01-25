@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=NetP2_4 Pin=U1-
+Added Component: Designator=USART1(HDR1X3)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change Net Name : Old Net Name=NetP?_1 New Net Name=NetADC1_1
+Change Net Name : Old Net Name=NetP?_2 New Net Name=NetADC1_2
+Added Pin To Net: NetName=NetU1_29 Pin=U1-29
+Added Pin To Net: NetName=NetU1_29 Pin=USART1-3
+Added Net: Name=NetU1_29
+Added Pin To Net: NetName=NetU1_42 Pin=U1-42
+Added Pin To Net: NetName=NetU1_42 Pin=USART1-1
+Added Net: Name=NetU1_42
+Added Pin To Net: NetName=NetU1_43 Pin=U1-43
+Added Pin To Net: NetName=NetU1_43 Pin=USART1-2
+Added Net: Name=NetU1_43
+Added Member To Class: ClassName=Chassis-Rx-PCB(STM32) Member=Component USART1 Header 3
+Added Room: Name=Chassis-Rx-PCB(STM32)
