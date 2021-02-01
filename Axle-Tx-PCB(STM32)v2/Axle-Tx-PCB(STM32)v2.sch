@@ -25,10 +25,10 @@ F 3 "" H 2500 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:4P2C BatCon1
+L Connector:4P2C B+1
 U 1 1 5FDD17C1
 P 1150 1950
-F 0 "BatCon1" H 1207 2417 50  0000 C CNN
+F 0 "B+1" H 1207 2417 50  0000 C CNN
 F 1 "4P2C" H 1207 2326 50  0000 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" V 1150 2000 50  0001 C CNN
 F 3 "~" V 1150 2000 50  0001 C CNN
@@ -36,10 +36,10 @@ F 3 "~" V 1150 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Linear:LD39015M33R 3.3Vreg1
+L Regulator_Linear:LD39015M33R 3v3reg1
 U 1 1 5FDD62D1
 P 2500 1400
-F 0 "3.3Vreg1" H 2500 1742 50  0000 C CNN
+F 0 "3v3reg1" H 2500 1742 50  0000 C CNN
 F 1 "LD39015M33R" H 2500 1651 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5" H 2500 1725 50  0001 C CIN
 F 3 "http://www.st.com/resource/en/datasheet/ld39015.pdf" H 2500 1400 50  0001 C CNN
@@ -60,33 +60,25 @@ $EndComp
 $Comp
 L power:+3.3V #PWR05
 U 1 1 5FDBD5D2
-P 1650 3700
-F 0 "#PWR05" H 1650 3550 50  0001 C CNN
-F 1 "+3.3V" H 1665 3873 50  0000 C CNN
-F 2 "" H 1650 3700 50  0001 C CNN
-F 3 "" H 1650 3700 50  0001 C CNN
-	1    1650 3700
+P 1650 3900
+F 0 "#PWR05" H 1650 3750 50  0001 C CNN
+F 1 "+3.3V" H 1665 4073 50  0000 C CNN
+F 2 "" H 1650 3900 50  0001 C CNN
+F 3 "" H 1650 3900 50  0001 C CNN
+	1    1650 3900
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #PWR04
 U 1 1 5FDBEC24
-P 1350 3700
-F 0 "#PWR04" H 1350 3450 50  0001 C CNN
-F 1 "GND" H 1355 3527 50  0000 C CNN
-F 2 "" H 1350 3700 50  0001 C CNN
-F 3 "" H 1350 3700 50  0001 C CNN
-	1    1350 3700
+P 1650 4100
+F 0 "#PWR04" H 1650 3850 50  0001 C CNN
+F 1 "GND" H 1655 3927 50  0000 C CNN
+F 2 "" H 1650 4100 50  0001 C CNN
+F 3 "" H 1650 4100 50  0001 C CNN
+	1    1650 4100
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	1650 3900 1650 3700
-Wire Wire Line
-	1350 4000 1350 3700
-Text GLabel 1550 4100 0    50   Input ~ 0
-NRST
-Text GLabel 3700 4050 0    50   Input ~ 0
-NRST
 $Comp
 L power:GND #PWR022
 U 1 1 5FDF92E4
@@ -109,8 +101,6 @@ F 3 "" H 4600 3550 50  0001 C CNN
 	1    4600 3550
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	4600 3550 4600 3850
 $Comp
 L Device:R SG1
 U 1 1 5FE76A25
@@ -254,36 +244,10 @@ F 3 "~" H 1750 1400 50  0001 C CNN
 	1    1750 1400
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	1550 4100 1650 4100
-Text GLabel 1650 4300 0    50   Input ~ 0
+Text GLabel 1650 4000 0    50   Input ~ 0
 PA14-SWCLK
 Text GLabel 1650 4200 0    50   Input ~ 0
 PA13-SWDIO
-Wire Wire Line
-	1650 4000 1350 4000
-$Comp
-L Connector_Generic:Conn_01x05 J1
-U 1 1 5FDCA7BD
-P 1850 4100
-F 0 "J1" V 1722 4380 50  0000 L CNN
-F 1 "SWD Con" V 1950 3950 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 1850 4100 50  0001 C CNN
-F 3 "~" H 1850 4100 50  0001 C CNN
-	1    1850 4100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_02x04_Top_Bottom J2
-U 1 1 5FE176D1
-P 4700 2050
-F 0 "J2" H 4750 2367 50  0000 C CNN
-F 1 "nRF24L01 Con" H 4750 2276 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 4700 2050 50  0001 C CNN
-F 3 "~" H 4700 2050 50  0001 C CNN
-	1    4700 2050
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR0103
 U 1 1 5FE1A580
@@ -298,12 +262,12 @@ $EndComp
 $Comp
 L power:+3.3V #PWR0104
 U 1 1 5FE1B2EE
-P 5250 1950
-F 0 "#PWR0104" H 5250 1800 50  0001 C CNN
-F 1 "+3.3V" H 5265 2123 50  0000 C CNN
-F 2 "" H 5250 1950 50  0001 C CNN
-F 3 "" H 5250 1950 50  0001 C CNN
-	1    5250 1950
+P 5000 1950
+F 0 "#PWR0104" H 5000 1800 50  0001 C CNN
+F 1 "+3.3V" H 5015 2123 50  0000 C CNN
+F 2 "" H 5000 1950 50  0001 C CNN
+F 3 "" H 5000 1950 50  0001 C CNN
+	1    5000 1950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -355,8 +319,6 @@ Text Notes 1000 4700 0    50   ~ 0
 Debug/Programming Header(male)\nDevice: ST-link V2\n\n
 Wire Wire Line
 	4200 1950 4500 1950
-Wire Wire Line
-	5000 1950 5250 1950
 Text Notes 3600 2850 0    50   ~ 0
 nRF24L01 connector (male header):\nGround  indexed on board with arrow\n\n\n
 Wire Notes Line
@@ -468,10 +430,6 @@ Wire Wire Line
 Connection ~ 2000 5300
 Text Notes 900  6150 0    50   ~ 0
 Power Decoupling\n+10nF for each VDD/VSS pair\nlabels shown for convenience\n
-Wire Wire Line
-	4800 3750 4800 3850
-Wire Wire Line
-	4700 3850 4700 3650
 Text GLabel 5000 2150 2    50   Input ~ 0
 SPI1-MOSI
 Text GLabel 4500 2150 0    50   Input ~ 0
@@ -512,8 +470,6 @@ NoConn ~ 5200 6450
 NoConn ~ 5200 6550
 NoConn ~ 5200 6650
 NoConn ~ 5200 6750
-NoConn ~ 3800 6550
-NoConn ~ 3800 6650
 NoConn ~ 3800 6750
 NoConn ~ 3800 6350
 NoConn ~ 3800 5850
@@ -556,7 +512,7 @@ U 1 1 5FEC242B
 P 3550 4250
 F 0 "R4" V 3500 4400 50  0000 C CNN
 F 1 "10k" V 3600 4400 50  0000 C CNN
-F 2 "Resistor_SMD:R_0201_0603Metric_Pad0.64x0.40mm_HandSolder" V 3480 4250 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3480 4250 50  0001 C CNN
 F 3 "~" H 3550 4250 50  0001 C CNN
 	1    3550 4250
 	0    1    1    0   
@@ -567,18 +523,11 @@ U 1 1 5FEC329D
 P 3750 3850
 F 0 "R5" H 3800 3900 50  0000 L CNN
 F 1 "10k" H 3800 3800 50  0000 L CNN
-F 2 "Resistor_SMD:R_0201_0603Metric_Pad0.64x0.40mm_HandSolder" V 3680 3850 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3680 3850 50  0001 C CNN
 F 3 "~" H 3750 3850 50  0001 C CNN
 	1    3750 3850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3700 4050 3750 4050
-Wire Wire Line
-	3750 4000 3750 4050
-Connection ~ 3750 4050
-Wire Wire Line
-	3750 4050 3800 4050
 Wire Wire Line
 	3300 4250 3400 4250
 Wire Wire Line
@@ -610,7 +559,7 @@ U 1 1 5FE25EC5
 P 5800 4600
 F 0 "R6" H 5730 4554 50  0000 R CNN
 F 1 "10k" H 5730 4645 50  0000 R CNN
-F 2 "Resistor_SMD:R_0201_0603Metric_Pad0.64x0.40mm_HandSolder" V 5730 4600 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5730 4600 50  0001 C CNN
 F 3 "~" H 5800 4600 50  0001 C CNN
 	1    5800 4600
 	-1   0    0    1   
@@ -631,17 +580,6 @@ F 3 "~" H 8100 5300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 15350 -50 
-$Comp
-L MCU_ST_STM32F3:STM32F373CCTx STM32
-U 1 1 5FDC894B
-P 4500 5350
-F 0 "STM32" H 4500 5400 50  0000 C CNN
-F 1 "STM32F373CCTx" H 4500 5300 50  0000 C CNN
-F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 3900 3850 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00046749.pdf" H 4500 5350 50  0001 C CNN
-	1    4500 5350
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR0108
 U 1 1 5FE73564
@@ -675,8 +613,6 @@ F 3 "" H 3800 4450 50  0001 C CNN
 	1    3800 4450
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	4500 3450 4500 3850
 $Comp
 L power:+3.3V #PWR0113
 U 1 1 5FE76AEB
@@ -3078,8 +3014,6 @@ F 3 "" H 4400 3350 50  0001 C CNN
 	1    4400 3350
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	4400 3850 4400 3350
 $Comp
 L power:+3.3V #PWR0120
 U 1 1 5FE9CF7F
@@ -3091,4 +3025,121 @@ F 3 "" H 3000 1300 50  0001 C CNN
 	1    3000 1300
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:R R1
+U 1 1 600FB96B
+P 3300 6700
+F 0 "R1" H 3350 6650 50  0000 L CNN
+F 1 "2k2" H 3350 6600 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3230 6700 50  0001 C CNN
+F 3 "~" H 3300 6700 50  0001 C CNN
+	1    3300 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 600FBF9F
+P 3550 6800
+F 0 "R2" H 3600 6750 50  0000 L CNN
+F 1 "2k2" H 3600 6700 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3480 6800 50  0001 C CNN
+F 3 "~" H 3550 6800 50  0001 C CNN
+	1    3550 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 6650 3800 6650
+Wire Wire Line
+	3800 6550 3300 6550
+$Comp
+L Connector_Generic:Conn_01x04 SWD1
+U 1 1 60119A3D
+P 1850 4000
+F 0 "SWD1" H 1930 3992 50  0000 L CNN
+F 1 "SWDConnector" H 1930 3901 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1850 4000 50  0001 C CNN
+F 3 "~" H 1850 4000 50  0001 C CNN
+	1    1850 4000
+	1    0    0    -1  
+$EndComp
+Text Notes 3600 2250 0    50   ~ 0
+PCB LAYOUT:\n[1, 2]\n[3. 4]\n[5, 6]\n[7, 8]
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even J1
+U 1 1 60162C4D
+P 4700 2050
+F 0 "J1" H 4750 2367 50  0000 C CNN
+F 1 "nRF24" H 4750 2276 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 4700 2050 50  0001 C CNN
+F 3 "~" H 4700 2050 50  0001 C CNN
+	1    4700 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 3750 4800 3850
+Wire Wire Line
+	4700 3850 4700 3650
+Wire Wire Line
+	4600 3550 4600 3850
+Wire Wire Line
+	4500 3450 4500 3850
+Wire Wire Line
+	4400 3850 4400 3350
+$Comp
+L MCU_ST_STM32F3:STM32F373CCTx STM32
+U 1 1 5FDC894B
+P 4500 5350
+F 0 "STM32" H 4500 5400 50  0000 C CNN
+F 1 "STM32F373CCTx" H 4500 5300 50  0000 C CNN
+F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 3900 3850 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00046749.pdf" H 4500 5350 50  0001 C CNN
+	1    4500 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 4000 3750 4050
+Wire Wire Line
+	3800 4050 3750 4050
+$Comp
+L Device:LED LED1
+U 1 1 600F6FDD
+P 3300 7000
+F 0 "LED1" V 3350 6950 50  0000 R CNN
+F 1 "LED" V 3250 6950 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3300 7000 50  0001 C CNN
+F 3 "~" H 3300 7000 50  0001 C CNN
+	1    3300 7000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED LED2
+U 1 1 600F79E5
+P 3550 7100
+F 0 "LED2" V 3600 7050 50  0000 R CNN
+F 1 "LED" V 3500 7050 50  0000 R CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3550 7100 50  0001 C CNN
+F 3 "~" H 3550 7100 50  0001 C CNN
+	1    3550 7100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 6016F1CE
+P 3400 7300
+F 0 "#PWR0107" H 3400 7050 50  0001 C CNN
+F 1 "GND" H 3405 7127 50  0000 C CNN
+F 2 "" H 3400 7300 50  0001 C CNN
+F 3 "" H 3400 7300 50  0001 C CNN
+	1    3400 7300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 7150 3300 7300
+Wire Wire Line
+	3300 7300 3400 7300
+Wire Wire Line
+	3550 7250 3550 7300
+Wire Wire Line
+	3550 7300 3400 7300
+Connection ~ 3400 7300
 $EndSCHEMATC

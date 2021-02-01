@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [Free Documents]
+   Generated File[RxPCB.TXT]
+   Generated File[RxPCB-BoardEdgeRout.TXT]
+   Generated File[RxPCB.LDP]
+   Generated File[RxPCB.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 9:25:51 PM On 2021-01-31
