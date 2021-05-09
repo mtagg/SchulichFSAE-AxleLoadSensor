@@ -1,4 +1,4 @@
-19211955358285548
+19216795804433373
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -1553,6 +1553,13 @@ Push Button
 0
 4
 4
+Button_Switch_THT
+SPDT_Slide
+
+
+0
+6
+3
 Button_Switch_THT
 SW_CW_GPTS203211B
 SPST Off-On Pushbutton, 1A, 30V, CW Industries P/N GPTS203211B, http://switches-connectors-custom.cwind.com/Asset/GPTS203211BR2.pdf
@@ -56973,6 +56980,13 @@ Arduino Nano
 30
 30
 Module
+Arduino_Pro_Micro
+
+
+0
+24
+22
+Module
 Arduino_UNO_R2
 Arduino UNO R2, http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf
 Arduino UNO R2
@@ -57014,6 +57028,13 @@ Maple Mini
 0
 40
 40
+Module
+OLED(7pin)
+
+
+0
+7
+7
 Module
 Onion_Omega2+
 https://onion.io/omega2/
